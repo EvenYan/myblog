@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 import random
 
 from django.http import HttpResponse
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 
 # Create your views here.
 from blog.models import Post
@@ -26,7 +26,7 @@ def add_post(request):
     return HttpResponse("Hello Django!")
 
 
-def detail(request):
-    post = Post.objects.last()
+def detail(request, id):
+    post = get_object_or_404(Post, id=id)
     context = {"post": post}
     return render(request, 'blog/detail.htm', context=context)
