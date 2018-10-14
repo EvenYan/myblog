@@ -5,6 +5,11 @@
     <title>文章列表页</title>
 </head>
 <body>
+    <ul>
+        {% for post in post_list %}
+            <li><a href="/detail">{{ post }}</a></li>
+        {% endfor %}
 
+    </ul>
 </body>
 </html>

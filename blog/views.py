@@ -10,6 +10,13 @@ from django.shortcuts import render
 from blog.models import Post
 
 
+def get_post_list(request):
+    post_list = Post.objects.all()
+    context = {"post_list": post_list}
+
+    return render(request, 'blog/post_list.html', context=context)
+
+
 def add_post(request):
     post = Post()
     num = random.randrange(100)
@@ -17,3 +24,9 @@ def add_post(request):
     post.body = "body of %s" % num
     post.save()
     return HttpResponse("Hello Django!")
+
+
+def detail(request):
+    post = Post.objects.last()
+    context = {"post": post}
+    return render(request, 'blog/detail.htm', context=context)
