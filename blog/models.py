@@ -9,10 +9,14 @@ from django.db import models
 class Post(models.Model):
     title = models.CharField(max_length=100)
     body = models.TextField()
-    created_time = models.DateTimeField(auto_now_add=True)
-    modified_time = models.DateTimeField(auto_now_add=True)
+    created_time = models.DateTimeField()
+    modified_time = models.DateTimeField()
     excerpt = models.CharField(max_length=100)
     views = models.PositiveIntegerField(default=666)
 
     def __str__(self):
         return self.title
+
+    class Meta:
+        verbose_name = "文章"
+        verbose_name_plural = "文章"
