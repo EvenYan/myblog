@@ -34,6 +34,9 @@ def index(request):
     response.write("这是write方法写入的数据")
     response.set_cookie('name', 'alice', max_age=30)
 
+    # 位置参数的反向解析
+    # return redirect(reverse('blog:detail', args=(10,))
+    # 关键字参数的反向解析
     return redirect(reverse('blog:detail', kwargs={"num": 10}))
 
 
@@ -62,3 +65,11 @@ def detail(request, num):
     post = get_object_or_404(Post, id=num)
     context = {"post": post}
     return render(request, 'blog/detail.htm', context=context)
+
+
+def tmp(request):
+    post_list = Post.objects.all()
+    name = ""
+    context = {"post_list": post_list, 'name': name, 'html': "<script>alert('你好！')</script>"}
+    # return HttpResponse("<h1 style='color:red'>标题1</h1>")
+    return render(request, 'page.html', context=context)
