@@ -3,7 +3,7 @@
 from django.contrib import admin
 
 # Register your models here.
-from blog.models import Post
+from blog.models import Post, Category, Tag
 
 
 class PostModelAdmin(admin.ModelAdmin):
@@ -25,8 +25,10 @@ class PostModelAdmin(admin.ModelAdmin):
     list_per_page = 10
     search_fields = ("body", "title")
     # fields = ("title", "created_time", "modified_time", "excerpt")
-    fieldsets = (('基本信息', {'fields': ('title', 'body')}), ("详细信息", {"fields": ("created_time", "modified_time", "excerpt")}))
-    list_filter = ("title", 'views')
+    # fieldsets = (('基本信息', {'fields': ('title', 'body')}), ("详细信息", {"fields": ("created_time", "modified_time", "excerpt")}))
+    # list_filter = ("title", 'views')
 
 
 admin.site.register(Post, PostModelAdmin)
+admin.site.register(Category)
+admin.site.register(Tag)
