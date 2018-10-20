@@ -1,0 +1,90 @@
+*** Starting uWSGI 2.0.17.1 (64bit) on [Fri Oct 19 23:05:34 2018] ***
+compiled with version: 7.3.0 on 08 October 2018 10:13:19
+os: Linux-4.15.0-36-generic #39-Ubuntu SMP Mon Sep 24 16:19:09 UTC 2018
+nodename: even-virtual-machine
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /home/even/PycharmProjects/myblog
+writing pidfile to uwsgi.pid
+detected binary path: /home/even/.virtualenvs/blog/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/even/PycharmProjects/myblog
+your processes number limit is 31577
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 192.168.43.10:8080 fd 4
+uwsgi socket 0 bound to TCP address 127.0.0.1:42947 (port auto-assigned) fd 3
+Python version: 3.6.5 (default, Apr  1 2018, 05:46:30)  [GCC 7.3.0]
+Python main interpreter initialized at 0x5561ff6940d0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 166688 bytes (162 KB) for 2 cores
+*** Operational MODE: threaded ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x5561ff6940d0 pid: 29484 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 29484)
+spawned uWSGI worker 1 (pid: 29509, cores: 2)
+spawned uWSGI http 1 (pid: 29510)
+[pid: 29509|app: 0|req: 1/1] 192.168.43.10 () {38 vars in 648 bytes} [Fri Oct 19 15:06:02 2018] GET /posts => generated 1094 bytes in 47 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 29509|app: 0|req: 2/2] 192.168.43.10 () {38 vars in 626 bytes} [Fri Oct 19 15:06:02 2018] GET /favicon.ico => generated 2476 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+[pid: 29509|app: 0|req: 3/3] 192.168.43.10 () {40 vars in 679 bytes} [Fri Oct 19 15:11:45 2018] GET /posts => generated 1094 bytes in 14 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+SIGINT/SIGQUIT received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 29510)
+worker 1 buried after 1 seconds
+goodbye to uWSGI.
+*** Starting uWSGI 2.0.17.1 (64bit) on [Fri Oct 19 23:12:26 2018] ***
+compiled with version: 7.3.0 on 08 October 2018 10:13:19
+os: Linux-4.15.0-36-generic #39-Ubuntu SMP Mon Sep 24 16:19:09 UTC 2018
+nodename: even-virtual-machine
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /home/even/PycharmProjects/myblog
+writing pidfile to uwsgi.pid
+detected binary path: /home/even/.virtualenvs/blog/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/even/PycharmProjects/myblog
+your processes number limit is 31577
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 192.168.43.10:8080 fd 3
+Python version: 3.6.5 (default, Apr  1 2018, 05:46:30)  [GCC 7.3.0]
+Python main interpreter initialized at 0x5566a8f98000
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 166688 bytes (162 KB) for 2 cores
+*** Operational MODE: threaded ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x5566a8f98000 pid: 29804 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 29804)
+spawned uWSGI worker 1 (pid: 29829, cores: 2)
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+Not Found: /index
+[pid: 29829|app: 0|req: 1/1] 192.168.43.10 () {44 vars in 724 bytes} [Fri Oct 19 15:16:54 2018] GET /index => generated 2453 bytes in 14 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 29829|app: 0|req: 2/2] 192.168.43.10 () {42 vars in 693 bytes} [Fri Oct 19 15:17:03 2018] GET /posts => generated 1094 bytes in 28 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 1)
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+Not Found: /
+[pid: 29829|app: 0|req: 3/3] 192.168.43.152 () {42 vars in 694 bytes} [Fri Oct 19 15:18:14 2018] GET / => generated 2420 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+Not Found: /favicon.ico
+[pid: 29829|app: 0|req: 4/4] 192.168.43.152 () {42 vars in 672 bytes} [Fri Oct 19 15:18:14 2018] GET /favicon.ico => generated 2471 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 29829|app: 0|req: 5/5] 192.168.43.152 () {42 vars in 704 bytes} [Fri Oct 19 15:18:23 2018] GET /posts => generated 1094 bytes in 8 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 29829|app: 0|req: 6/6] 192.168.43.152 () {44 vars in 752 bytes} [Fri Oct 19 15:18:25 2018] GET /detail/8 => generated 347 bytes in 16 msecs (HTTP/1.1 200) 3 headers in 109 bytes (1 switches on core 0)
+[pid: 29829|app: 0|req: 7/7] 192.168.43.152 () {44 vars in 754 bytes} [Fri Oct 19 15:18:28 2018] GET /detail/19 => generated 348 bytes in 13 msecs (HTTP/1.1 200) 3 headers in 109 bytes (1 switches on core 1)
