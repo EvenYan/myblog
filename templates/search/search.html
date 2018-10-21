@@ -1,0 +1,22 @@
+{% load highlight %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>搜索结果</title>
+    <style>
+        span.highlighted {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    {% for result in page.object_list %}
+        <a href="{{ result.object.get_obsolute_url }}">{% highlight result.object.title with query %}</a>
+        <p>{% highlight result.object.body with query %}</p>
+    {% empty %}
+        <span>没有搜索到任何结果!</span>
+    {% endfor %}
+
+</body>
+</html>

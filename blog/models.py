@@ -7,6 +7,22 @@ from django.db import models
 # Create your models here.
 
 
+class CountManager(models.Manager):
+    def title_count(self, kw):
+        return self.filter(title__contains=kw)
+
+
+class SecretManager(models.Manager):
+    def get_queryset(self):
+        return super().get_queryset().filter(excerpt="secret")
+
+
+class NormalManager(models.Manager):
+    def get_queryset(self):
+        return super().get_queryset().exclude(excerpt="secret")
+
+
+
 class Category(models.Model):
     name = models.CharField(max_length=50)
 
@@ -32,6 +48,12 @@ class Post(models.Model):
     tags = models.ManyToManyField(Tag)
 
     author = models.ForeignKey(User)
+
+
+    my_objects = models.Manager()
+    count_objects = CountManager()
+    secret_objects = SecretManager()
+    normal_objects = NormalManager()
 
     def __str__(self):
         return self.title

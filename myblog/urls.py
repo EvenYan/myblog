@@ -21,4 +21,6 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'', include("blog.urls", namespace="blog")),
     url(r'user/', include("user.urls", namespace="user")),
+    url(r'^captcha/', include('captcha.urls')),
+    url(r'^search/', include("haystack.urls")),
 ]

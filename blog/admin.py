@@ -21,9 +21,9 @@ class PostModelAdmin(admin.ModelAdmin):
     # save_on_top = False
     # preserve_filters = True
     # inlines = []
-    list_display = ('title', 'created_time')
+    list_display = ('id', 'title', 'created_time')
     list_per_page = 10
-    search_fields = ("body", "title")
+    search_fields = ('id',)
     # fields = ("title", "created_time", "modified_time", "excerpt")
     # fieldsets = (('基本信息', {'fields': ('title', 'body')}), ("详细信息", {"fields": ("created_time", "modified_time", "excerpt")}))
     # list_filter = ("title", 'views')
